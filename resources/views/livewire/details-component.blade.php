@@ -431,12 +431,15 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="row related-products">
+
+                                        @foreach ($rproducts as $rproduct)
+                                        
                                         <div class="col-lg-3 col-md-4 col-12 col-sm-6">
                                             <div class="product-cart-wrap small hover-up">
                                                 <div class="product-img-action-wrap">
                                                     <div class="product-img product-img-zoom">
-                                                        <a href="product-details.html" tabindex="0">
-                                                            <img class="default-img" src="{{('assets/imgs/shop/product-2-1.jpg')}}" alt="">
+                                                        <a href="{{route('product.details',['slug'=>$rproduct->slug])}}" tabindex="0">
+                                                            <img class="default-img" src="{{('assets/imgs/shop/product-')}}{{$rproduct->id}}-1.jpg" alt="{{$rproduct->name}}">
                                                             <img class="hover-img" src="{{('assets/imgs/shop/product-2-2.jpg')}}" alt="">
                                                         </a>
                                                     </div>
@@ -450,111 +453,21 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-content-wrap">
-                                                    <h2><a href="product-details.html" tabindex="0">Ulstra Bass Headphone</a></h2>
+                                                    <h2><a href="{{route('product.details',['slug'=>$rproduct->slug])}}" tabindex="0">{{$rproduct->name}}</a></h2>
                                                     <div class="rating-result" title="90%">
                                                         <span>
                                                         </span>
                                                     </div>
                                                     <div class="product-price">
-                                                        <span>$238.85 </span>
-                                                        <span class="old-price">$245.8</span>
+                                                        <span>${{$rproduct->regular_price}} </span>
+                                                        {{-- <span class="old-price">$245.8</span> --}}
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-4 col-12 col-sm-6">
-                                            <div class="product-cart-wrap small hover-up">
-                                                <div class="product-img-action-wrap">
-                                                    <div class="product-img product-img-zoom">
-                                                        <a href="product-details.html" tabindex="0">
-                                                            <img class="default-img" src="{{('assets/imgs/shop/product-3-1.jpg')}}" alt="">
-                                                            <img class="hover-img" src="{{('assets/imgs/shop/product-4-2.jpg')}}" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-action-1">
-                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-search"></i></a>
-                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="wishlist.php" tabindex="0"><i class="fi-rs-heart"></i></a>
-                                                        <a aria-label="Compare" class="action-btn small hover-up" href="compare.php" tabindex="0"><i class="fi-rs-shuffle"></i></a>
-                                                    </div>
-                                                    <div class="product-badges product-badges-position product-badges-mrg">
-                                                        <span class="sale">-12%</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content-wrap">
-                                                    <h2><a href="product-details.html" tabindex="0">Smart Bluetooth Speaker</a></h2>
-                                                    <div class="rating-result" title="90%">
-                                                        <span>
-                                                        </span>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>$138.85 </span>
-                                                        <span class="old-price">$145.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-4 col-12 col-sm-6">
-                                            <div class="product-cart-wrap small hover-up">
-                                                <div class="product-img-action-wrap">
-                                                    <div class="product-img product-img-zoom">
-                                                        <a href="product-details.html" tabindex="0">
-                                                            <img class="default-img" src="{{('assets/imgs/shop/product-4-1.jpg')}}" alt="">
-                                                            <img class="hover-img" src="{{('assets/imgs/shop/product-4-2.jpg')}}" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-action-1">
-                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-search"></i></a>
-                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="wishlist.php" tabindex="0"><i class="fi-rs-heart"></i></a>
-                                                        <a aria-label="Compare" class="action-btn small hover-up" href="compare.php" tabindex="0"><i class="fi-rs-shuffle"></i></a>
-                                                    </div>
-                                                    <div class="product-badges product-badges-position product-badges-mrg">
-                                                        <span class="new">New</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content-wrap">
-                                                    <h2><a href="product-details.html" tabindex="0">HomeSpeak 12UEA Goole</a></h2>
-                                                    <div class="rating-result" title="90%">
-                                                        <span>
-                                                        </span>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>$738.85 </span>
-                                                        <span class="old-price">$1245.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-4 col-12 col-sm-6">
-                                            <div class="product-cart-wrap small hover-up mb-0">
-                                                <div class="product-img-action-wrap">
-                                                    <div class="product-img product-img-zoom">
-                                                        <a href="product-details.html" tabindex="0">
-                                                            <img class="default-img" src="{{('assets/imgs/shop/product-5-1.jpg')}}" alt="">
-                                                            <img class="hover-img" src="{{('assets/imgs/shop/product-3-2.jpg')}}" alt="">
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-action-1">
-                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-search"></i></a>
-                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="wishlist.php" tabindex="0"><i class="fi-rs-heart"></i></a>
-                                                        <a aria-label="Compare" class="action-btn small hover-up" href="compare.php" tabindex="0"><i class="fi-rs-shuffle"></i></a>
-                                                    </div>
-                                                    <div class="product-badges product-badges-position product-badges-mrg">
-                                                        <span class="hot">Hot</span>
-                                                    </div>
-                                                </div>
-                                                <div class="product-content-wrap">
-                                                    <h2><a href="product-details.html" tabindex="0">Dadua Camera 4K 2022EF</a></h2>
-                                                    <div class="rating-result" title="90%">
-                                                        <span>
-                                                        </span>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span>$89.8 </span>
-                                                        <span class="old-price">$98.8</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                        @endforeach
+
                                     </div>
                                 </div>
                             </div>                            
@@ -623,42 +536,24 @@
                                 <h5 class="widget-title mb-10">New products</h5>
                                 <div class="bt-1 border-color-1"></div>
                             </div>
+
+                            @foreach($nproducts as $nproduct)
+
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/thumbnail-3.jpg')}}" alt="#">
+                                    <img src="{{asset('assets/imgs/shop/product-')}}{{$nproduct->id}}-1.jpg" alt="{{$nproduct->name}}">
                                 </div>
                                 <div class="content pt-10">
-                                    <h5><a href="product-details.html">Chen Cardigan</a></h5>
-                                    <p class="price mb-0 mt-5">$99.50</p>
+                                    <h5><a href="{{route('product.details',['slug'=>$nproduct->slug])}}">{{$nproduct->name}}</a></h5>
+                                    <p class="price mb-0 mt-5">{{$nproduct->regular_price}}</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:90%"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-post clearfix">
-                                <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/thumbnail-4.jpg')}}" alt="#">
-                                </div>
-                                <div class="content pt-10">
-                                    <h6><a href="product-details.html">Chen Sweater</a></h6>
-                                    <p class="price mb-0 mt-5">$89.50</p>
-                                    <div class="product-rate">
-                                        <div class="product-rating" style="width:80%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-post clearfix">
-                                <div class="image">
-                                    <img src="{{asset('assets/imgs/shop/thumbnail-5.jpg')}}" alt="#">
-                                </div>
-                                <div class="content pt-10">
-                                    <h6><a href="product-details.html">Colorful Jacket</a></h6>
-                                    <p class="price mb-0 mt-5">$25</p>
-                                    <div class="product-rate">
-                                        <div class="product-rating" style="width:60%"></div>
-                                    </div>
-                                </div>
-                            </div>
+
+                            @endforeach
+
                         </div>                        
                     </div>
                 </div>

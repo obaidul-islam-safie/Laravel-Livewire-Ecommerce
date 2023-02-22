@@ -11,6 +11,7 @@ use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\CategoryComponent;
 use App\Http\Livewire\SearchComponent;
+use App\Http\Livewire\WishlistComponent;
 
 
 /*
@@ -32,6 +33,8 @@ Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
 Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.category');
 
 Route::get('/search',SearchComponent::class)->name('product.search');
+
+route::get('/wishlist',WishlistComponent::class)->name('shop.wishlist');
 
 
 

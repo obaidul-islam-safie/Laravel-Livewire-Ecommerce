@@ -13,6 +13,10 @@
         .wishtisted i{
             color: white !important;
         }
+        .product-cart-wrap .product-action-1 button:after, .product-cart-wrap .product-action-1 a.action-btn:after { 
+             left: 20%;
+        }
+
     </style>
 
     <main class="main">

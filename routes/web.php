@@ -14,6 +14,8 @@ use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\WishlistComponent;
 use App\Http\Livewire\Admin\AdminCategoriesComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
+use App\Http\Livewire\Admin\AdminEditCategoryComponent;
+
 
 
 
@@ -34,9 +36,7 @@ Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
 Route::get('/cart',CartComponent::class)->name('shop.cart');
 Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
 Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.category');
-
 Route::get('/search',SearchComponent::class)->name('product.search');
-
 route::get('/wishlist',WishlistComponent::class)->name('shop.wishlist');
 
 
@@ -48,6 +48,7 @@ Route::middleware(['auth','authadmin'])->group(function () {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/category', AdminCategoriesComponent::class)->name('admin.category');
     Route::get('/admin/addcategoty',AdminCategoryComponent::class)->name('admin.addcategory');
+    Route::get('/admin/editcategoty/{category_id}',AdminEditCategoryComponent::class)->name('admin.editcategory');
 });
 
 

@@ -70,7 +70,7 @@
                                                 <td>{{$product->category->name}}</td>
                                                 <td>{{$product->created_at}}</td>
                                                 <td>
-                                                    
+                                                    <a href="{{route('admin.products.edit',['product_id'=>$product->id])}}" class="text-info">Edit</a>
                                                 </td>
                                             </tr>
                                         @endforeach

@@ -11,6 +11,7 @@ class AdminCategoryComponent extends Component
 {
     public $name;
     public $slug;
+    
     public function geneateSlug(){
         $this->slug = Str::slug($this->name);
     }
@@ -34,6 +35,7 @@ class AdminCategoryComponent extends Component
     }
     public function render()
     {
+        
         return view('livewire.admin.admin-category-component');
     }
 }

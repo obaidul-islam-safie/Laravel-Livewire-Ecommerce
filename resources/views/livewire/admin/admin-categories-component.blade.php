@@ -77,10 +77,10 @@
     </main>
 </div>
 
-<div class="model" id="deleteConfirmation">
-    <div class="model-dialog">
-        <div class="model-conten">
-            <div class="model-body pb-30 bt-30">
+<div class="modal" id="deleteConfirmation">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body pb-30 pt-30">
                 <div class="row">
                     <div class="cl-md-12 text-center">
                         <h4 class="pb-3">Do you want to delete this record?</h4>
@@ -96,11 +96,11 @@
     <script>
          function deleteConfirmation(id){
             @this.set('category_id',id);
-            $('#deleteConfirmation').model('show');
+            $('#deleteConfirmation').modal('show');
          }
          function deleteCategory(){
              @this.call('deleteCategory');
-             $('#deleteConfirmation').model('hide');
+             $('#deleteConfirmation').modal('hide');
          }
     </script>
 @endpush

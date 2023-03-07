@@ -14,7 +14,7 @@
                 <div class="breadcrumb">
                     <a href="/" rel="nofollow">Home</a>
                     
-                    <span></span> Add New Categories
+                    <span></span> Add New Category
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                             <div class="card-heder">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        Add New Categories
+                                        Add New Category
                                     </div>
                                     <div class="col-md-6">
                                         <a href="{{route('admin.category')}}" class="btn brn-success float-end">All Categories</a>

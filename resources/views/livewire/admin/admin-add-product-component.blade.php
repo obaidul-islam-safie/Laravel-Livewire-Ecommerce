@@ -105,8 +105,8 @@
                                     </div>
 
                                     <div class="mb-3 mt-3">
-                                        <label for="featured" class="form-label" wire:model="featured">Featured</label>
-                                        <select name="featured" class="form-control">
+                                        <label for="featured" class="form-label">Featured</label>
+                                        <select name="featured" class="form-control" wire:model="featured">
                                             <option value="0">no</option>
                                             <option value="1">Yes</option>
                                         </select>

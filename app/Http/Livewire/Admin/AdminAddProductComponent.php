@@ -53,13 +53,13 @@ class AdminAddProductComponent extends Component
         $product->description = $this->description;
         $product->regular_price = $this->regular_price;
         $product->sale_price = $this->sale_price;
-        $product->sku = $this->sku;
+        $product->SKU = $this->sku;
         $product->stock_status = $this->stock_status;
         $product->featured = $this->featured;
         $product->quantity = $this->quantity;
 
         $imageName = Carbon::now()->timestamp.'.'.$this->image->extension();
-        $this->image->storeAs('product',$imageName);
+        $this->image->storeAs('products',$imageName);
         $product->image = $imageName;
 
         $product->category_id = $this->category_id;

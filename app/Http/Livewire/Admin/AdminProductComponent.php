@@ -12,6 +12,7 @@ class AdminProductComponent extends Component
     public $product_id;
 
     public function deleteProduct(){
+        dd('jdsfhjkd');
         $product = Product::find($this->product_id);
         unlink('assets/imgs/products/'.$product->image);
         $product->delete();

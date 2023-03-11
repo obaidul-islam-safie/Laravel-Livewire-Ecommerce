@@ -55,12 +55,20 @@
                             @auth
                                 
                             <ul>                                
-                                <li><i class="fi-rs-user"></i> {{Auth::user()->name}}  / 
+                                {{-- <li><i class="fi-rs-user"></i> {{Auth::user()->name}}
                                     <form method="POST" action="{{route('logout')}}">
                                         @csrf
                                         <a href="{{route('logout')}}" onclick="even.preventDefault(); this.closest('form').submit();" >Logout</a>
                                     </form>
+                                </li> --}}
+                                <li class='menu-item'>
+                                    <a href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><li><i class="fi-rs-user"></i> {{Auth::user()->name}}  / Logout</a>
                                 </li>
+                                <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                </form>
                             </ul>
                            
                             @else
